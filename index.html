@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="UCLA Radio">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UCLA Radio</title> 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- font awesome -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- other fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'>
+
+    <!-- trianglify, for background stuff -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.4/trianglify.min.js"></script>
+
+    <!-- Our stylesheets/scripts -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/recent_tracks.css">
+    <script src="js/scripts.js"></script>
+    <script src="js/recent_tracks.js"></script>
+    <script src="js/currently_playing.js"></script>
+
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="container" role="main">
+      <img id="logo" src="img/logo.png" alt="UCLA RADIO" />
+      <div id="play-button">
+        <a role="button" class="pop-button text-center" href="#">
+          <span id="play-icon" class="fa fa-play"></span>
+          <audio id="stream" preload="none">
+            <p>Your browser does not support the stream. :(</p>
+          </audio>
+        </a>
+      </div>
+      <div class="row" id="billboard">
+        <div class="col-sm-12"> 
+          LISTEN LIVE 
+        </div>
+      </div>
+
+
+
+
+      <div id="Current_info" class="row" style="font-style: normal">
+        <div class="col-sm-8" style="text-align: right;">
+            <div class="col-sm-6">
+                
+            </div>
+
+            <div class="col-sm-6">
+                <strong style="font-size: 40px">Currently On Air</strong>
+                <h2>%SHOW TITLE%</h2>
+                <h3>%DJ_NAME(S)%</h3>
+            </div>
+          UCLA Radio is an entirely student run radio station.
+            We broadcast all day, every day from a secret cave
+            in Ackerman Student Union.    UCLA Radio is an entirely student run radio station.
+            We broadcast all day, every day from a secret cave
+            in Ackerman Student Union.    UCLA Radio is an entirely student run radio station.
+            We broadcast all day, every day from a secret cave
+            in Ackerman Student Union.    UCLA Radio is an entirely student run radio station.
+            We broadcast all day, every day from a secret cave
+            in Ackerman Student Union.    UCLA Radio is an entirely student run radio station.
+    UCLA Radio is an entirely student run radio station.
+            We broadcast all day, every day from a secret cave
+            in Ackerman Student Union.
+            <br />
+        </div>
+
+
+
+        <div id="side" class="col-sm-3" style="margin-left: 10px; border-left: solid 1px">
+
+        <br />
+        <div id="lfmMostRecentTrack" style="text-align: left; font-size: 15px">
+                  <img id="lfmMostRecentTrackImage" src="http://cdn.last.fm/flatness/catalogue/noimage/2/default_album_medium.png"/>
+                  <b><span id="lfmMostRecentTrackDate"></span></b><br/>
+                  <span id="lfmMostRecentTrackArtist"></span> - <img id="lfmMostRecentTrackPlayIcon" src="http://cdn.last.fm/flatness/global/icon_play.png"/> <a id="lfmMostRecentTrackTitle" href="" target="new"></a><br/>
+                  <span id="lfmMostRecentTrackAlbum"></span>
+        </div>
+        <br />
+
+
+
+
+        <h2><strong>Recently Played</strong></h2>
+          <div id="lfmRecentTracks">
+            <div class="contain">
+              <img class="IMAGE" src="%IMAGE%" />
+              <span class="TITLE">%TITLE%</span>
+              <span class="ARTIST">by %ARTIST%</span>
+              <span class="DATE">%DATE%</span>
+            </div>
+         </div>
+        </div>
+      </div>
+      <br /><br />
+
+
+
+
+      <div class="row">
+        <div class="col-sm-12 desktop-only text-justify" id="messages">
+          <p>
+            UCLA Radio is an entirely student run radio station.
+            We broadcast all day, every day from a secret cave
+            in Ackerman Student Union.
+          </p>
+          <p>
+            We're accepting applications for Fall internships.
+            Apply <a href="http://recruiting.dailybruin.com/applications/uclaradiocom/radio-intern/" target="_blank">here</a> 
+            and let's be friends.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="row">
+          <span class="col-xs-12 col-sm-7" id="links-container">
+            <span class="col-xs-12 col-sm-3" id="blog-link">
+              <a class="pop-button" target="_blank" role="button" href="http://uclaradio.tumblr.com/">BLOG</a>
+            </span>
+            <span class="col-xs-12 col-sm-3" id="playlist-link">
+              <a class="pop-button" target="_blank" role="button" href="http://www.last.fm/user/uclaradio">PLAYLISTS</a>
+            </span>
+          </span>
+          <span class="col-xs-12 col-sm-5" id="social">
+            <a href="https://www.facebook.com/UCLARadio" target="_blank" class="pop-button facebook">
+              <i class="fa fa-facebook-square fa-2x"></i>
+            </a>
+            <a href="http://instagram.com/UCLARadio" target="_blank" class="pop-button instagram">
+              <i class="fa fa-instagram fa-2x "></i>
+            </a>
+            <a href="https://twitter.com/UCLAradio" target="_blank" class="pop-button twitter">
+              <i class="fa fa-twitter-square fa-2x "></i>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=uclaradio&api_key=d3e63e89b35e60885c944fe9b7341b76&limit=5&format=json&callback=lfmRecentTracks"></script>
+    <script type="text/javascript" src="http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=uclaradio&api_key=d3e63e89b35e60885c944fe9b7341b76&limit=1&format=json&callback=lfmMostRecentTrack"></script>
+
+
+
+  </body>
+</html>
+
